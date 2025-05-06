@@ -1,6 +1,7 @@
 from pynput import keyboard
 import keyboard as keyb
 from pandas.io.clipboard import clipboard_get
+import time
 
 def on_release(key, injected):
     # print(key)
@@ -11,6 +12,7 @@ def on_release(key, injected):
     if key == keyboard.Key.space:
        #keyboard.press(keyboard.Key.backspace)
         keyb.write(clipboard_get())
+        time.sleep(1)
 
 def on_press(key, injected):
     pass
