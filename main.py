@@ -9,13 +9,12 @@ def on_release(key, injected):
         # Stop listener
         # keyb.write(clipboard_get())
         return False
+
+def on_press(key, injected):
     if key == keyboard.Key.space:
        #keyboard.press(keyboard.Key.backspace)
         keyb.write(clipboard_get())
         time.sleep(1)
-
-def on_press(key, injected):
-    pass
 
 
 with keyboard.Listener(
