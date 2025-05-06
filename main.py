@@ -3,13 +3,13 @@ import keyboard as keyb
 from pandas.io.clipboard import clipboard_get
 
 def on_release(key, injected):
-    print(key)
+    # print(key)
     if key == keyboard.Key.esc:
         # Stop listener
-        keyb.write(clipboard_get())
+        # keyb.write(clipboard_get())
         return False
     if key == keyboard.Key.tab:
-        keyboard.press(keyboard.Key.backspace)
+       #keyboard.press(keyboard.Key.backspace)
         keyb.write(clipboard_get())
         print("hi")
 
