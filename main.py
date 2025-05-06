@@ -2,7 +2,7 @@ from pynput import keyboard
 import keyboard as keyb
 from pandas.io.clipboard import clipboard_get
 import time
-delay = false
+delay = False
 def on_release(key, injected):
     # print(key)
     if key == keyboard.Key.esc:
