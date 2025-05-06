@@ -11,7 +11,6 @@ def on_release(key, injected):
     if key == keyboard.Key.tab:
        #keyboard.press(keyboard.Key.backspace)
         keyb.write(clipboard_get())
-        print("hi")
 
 def on_press(key, injected):
     pass
