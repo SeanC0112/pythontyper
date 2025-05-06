@@ -2,7 +2,7 @@ from pynput import keyboard
 import keyboard as keyb
 from pandas.io.clipboard import clipboard_get
 import time
-
+delay = false
 def on_release(key, injected):
     # print(key)
     if key == keyboard.Key.esc:
@@ -12,9 +12,11 @@ def on_release(key, injected):
 
 def on_press(key, injected):
     if key == keyboard.Key.space:
-       #keyboard.press(keyboard.Key.backspace)
-        keyb.write(clipboard_get())
-        time.sleep(1)
+        if not delay:
+            keyb.write(clipboard_get())
+            delay = True
+       #keyboard.press(keyboard.Key.backspace
+        
 
 
 with keyboard.Listener(
@@ -22,3 +24,6 @@ with keyboard.Listener(
         on_release=on_release) as listener:
     listener.join()
 
+while True:
+    delay = False
+    time.sleep(1)
