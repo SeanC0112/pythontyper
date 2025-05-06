@@ -8,7 +8,7 @@ def on_release(key, injected):
         # Stop listener
         # keyb.write(clipboard_get())
         return False
-    if key == keyboard.Key.tab:
+    if key == keyboard.Key.space:
        #keyboard.press(keyboard.Key.backspace)
         keyb.write(clipboard_get())
 
