@@ -10,9 +10,8 @@ def on_release(key, injected):
         return False
 
 def on_press(key, injected):
-    if key == keyboard.Key.space:
+    if key == keyboard.Key.caps_lock:
         keyb.write(clipboard_get())
-        return False
        #keyboard.press(keyboard.Key.backspace
         
 
